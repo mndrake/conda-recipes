@@ -1,0 +1,36 @@
+package:
+  name: xgboost
+  version: "0.6"
+
+source:
+  url: https://github.com/mndrake/xgboost/releases/download/v0.60win64/xgboost-0.6-py27_0.tar.bz2
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - numpy
+    - scipy
+    - scikit-learn
+    - matplotlib
+
+  run:
+    - python
+    - numpy
+    - scipy
+    - scikit-learn
+    - matplotlib
+
+test:
+  imports:
+    - xgboost
+  commands:
+    - python -c "import xgboost;"
+
+about:
+  home: https://github.com/dmlc/xgboost
+  license: Apache-2
+  license_file: LICENSE
+  summary: Scalable Portable and Distributed Gradient Boosting
