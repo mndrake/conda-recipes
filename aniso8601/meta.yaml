@@ -1,25 +1,21 @@
 {% set name = "aniso8601" %}
 {% set version = "3.0.2" %}
-{% set sha256 = "7849749cf00ae0680ad2bdfe4419c7a662bef19c03691a19e008c8b9a5267802" %}
+{% set md5 = "b539fd9e5a5bfc80b86527c0eca0fa03" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://bitbucket.org/nielsenb/{{ name }}/get/v{{ version }}.tar.gz
+  md5: {{ md5 }}
 
 build:
-  noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
 
 requirements:
-  host:
-    - pip
-    - python
+  build:
+    - python =3.6
     - setuptools
 
   run:
@@ -35,6 +31,3 @@ about:
   license: BSD 3-Clause
   summary: A library for parsing ISO 8601 strings.
 
-extra:
-  recipe-maintainers:
-    - vamega
