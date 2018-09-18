@@ -1,6 +1,6 @@
 {% set name = "credit-model" %}
-{% set version = "0.0.1" %}
-{% set md5 = "4315cd414bd742434c8ff366711f492b" %}
+{% set version = "0.0.2" %}
+{% set md5 = "003dc71e3533446d9176a741a0b2d25f" %}
 
 package:
   name: {{ name }}
